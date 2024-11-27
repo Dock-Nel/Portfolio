@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson Bidault-Ferre - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+       :root { --primary: #ff6b2b; --secondary: #2a1810; --accent: #d35400; --text: #e8e8e8; --background: #1a1a1a; --card-bg: #2d2d2d; transition: all 0.5s ease; }body { font-family: 'DM Sans', sans-serif; margin: 0; padding: 0; background: var(--background); color: var(--text); line-height: 1.6; transition: all 0.5s ease; } .nav-toggle { position: fixed; top: 20px; right: 20px; z-index: 1000; background: rgba(255, 255, 255, 0.15); padding: 12px; border-radius: 50%; cursor: pointer; backdrop-filter: blur(5px); border: 2px solid var(--text); transition: all 0.5s ease; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; color: var(--text); } .nav-toggle.over-header { background: rgba(0, 0, 0, 0.8); border-color: var(--text); color: var(--primary); transition: all 0.5s ease; } .nav-toggle:hover { background: rgba(255, 255, 255, 0.25); transform: scale(1.1); } .hamburger { width: 24px; height: 18px; position: relative; display: flex; flex-direction: column; justify-content: space-between; } .hamburger span { display: block; width: 100%; height: 2px; background-color: currentColor; transition: all 0.3s ease; transform-origin: center; position: absolute; } .hamburger span:first-child { top: 0; } .hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); } .hamburger span:last-child { bottom: 0; } .nav-toggle.active .hamburger span:first-child { top: 50%; transform: translateY(-50%) rotate(45deg); } .nav-toggle.active .hamburger span:nth-child(2) { opacity: 0; } .nav-toggle.active .hamburger span:last-child { top: 50%; transform: translateY(-50%) rotate(-45deg); } .navigation { position: fixed; top: 0; left: 0; width: 100%; background: rgba(26, 26, 26, 0.95); backdrop-filter: blur(10px); transform: translateY(-100%); transition: transform 0.3s ease; z-index: 999; border-bottom: 1px solid var(--primary); } .navigation.active { transform: translateY(0); } .nav-links { display: flex; justify-content: flex-start; align-items: center; gap: 2rem; padding: 1rem; list-style: none; } .nav-links a { color: var(--text); text-decoration: none; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease; position: relative; overflow: hidden; } .nav-links a::before { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background: var(--primary); transition: all 0.3s ease; transform: translateX(-50%); } .nav-links a:hover::before { width: 80%; } .nav-links a:hover { color: var(--primary); transform: translateY(-2px); } .question-mark-icon { display: flex; align-items: center; margin-right: 2rem; } .question-mark { width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: var(--text); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; cursor: pointer; transition: transform 0.3s ease; } .question-mark:hover { transform: scale(1.1); } .header { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(45deg, #1a0f0a 0%, rgba(255, 107, 43, 0.7) 100%); margin-bottom: -4rem; padding: 2rem; position: relative; overflow: hidden; } .header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, rgba(26, 26, 26, 0.5) 0%, transparent 100%); pointer-events: none; } .header::after { content: ''; position: absolute; width: 200%; height: 200%; background: radial-gradient(circle, var(--accent) 0%, transparent 70%); opacity: 0.1; animation: pulse 15s ease-in-out infinite; } @keyframes pulse { 0% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.2) rotate(180deg); } 100% { transform: scale(1) rotate(360deg); } } .header h1 { font-size: 4rem; margin: 0; z-index: 2; color: var(--text); transition: all 0.3s ease; position: relative; } .header h1:hover { transform: scale(1.1); } .header h2 { color: var(--accent); } .profile-container { position: relative; z-index: 2; padding-top: 4rem; background: linear-gradient(180deg, transparent 0%, var(--background) 150px); } .section { background: var(--card-bg); border-radius: 20px; padding: 3rem; margin: 4rem 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid rgba(255,107,43,0.1); transition: all 0.3s ease; backdrop-filter: blur(10px); background: linear-gradient(180deg, rgba(45, 45, 45, 0.8), rgba(45, 45, 45, 0.95)); } .section:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(255,107,43,0.2); border-color: rgba(255,107,43,0.3); } .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; } .skill-card { background: linear-gradient(135deg, #332218, var(--card-bg)); padding: 2rem; border-radius: 15px; transition: all 0.3s ease; border-left: 4px solid var(--primary); position: relative; overflow: hidden; } .skill-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, transparent, rgba(255,107,43,0.1), transparent); transform: translateX(-100%); transition: 0.5s; } .skill-card:hover::before { transform: translateX(100%); } .project-card { background: var(--card-bg); border-radius: 20px; padding: 2rem; border: 1px solid rgba(255,107,43,0.2); box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: all 0.3s ease; } .project-card:hover { transform: scale(1.02); border-color: var(--primary); } .contact-info { display: flex; flex-direction: column; gap: 1.5rem; } .contact-item { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--card-bg); border-radius: 10px; border: 1px solid rgba(255,107,43,0.2); transition: all 0.3s ease; cursor: pointer; } .contact-item:hover { transform: translateX(10px); border-color: var(--primary); box-shadow: 0 5px 15px rgba(255,107,43,0.2); } .contact-item i { color: var(--primary); font-size: 1.5rem; } .contact-item a { color: var(--text); text-decoration: none; font-size: 1.1rem; } .contact-item a:hover { color: var(--primary); } @media (max-width: 768px) { .header h1 { font-size: 3rem; } .section { padding: 2rem; } } @keyframes navItemFade { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } } .arrows-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.9); padding: 40px; border-radius: 15px; z-index: 2000; text-align: center; } .popup-title { color: var(--text); margin-bottom: 20px; font-size: 1.2rem; font-weight: bold; } .arrows-container { display: grid; grid-template-areas: ". up ." "left center right" ". down ."; gap: 10px; } .arrow { width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s ease; } .arrow:hover { transform: scale(1.1); } .arrow-up { grid-area: up; background: #ff0000; } .arrow-down { grid-area: down; background: #00ff00; } .arrow-left { grid-area: left; background: #0000ff; } .arrow-right { grid-area: right; background: #ffff00; } .arrow i { color: white; font-size: 24px; } .center-dot { grid-area: center; width: 50px; height: 50px; background: #333; border-radius: 10px; } @keyframes rainbow-flash { 0% { filter: hue-rotate(0deg) brightness(100%); } 50% { filter: hue-rotate(360deg) brightness(120%); } 100% { filter: hue-rotate(0deg) brightness(100%); } } #secret-code-hint span { font-size: 1.5em; font-weight: bold; text-shadow: 0 0 3px rgba(0,0,0,0.3); } .contact-item:hover #secret-code-hint span { animation: bounce 0.5s; } @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } } @keyframes confetti-fall { 0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(360deg); opacity: 0; } } @keyframes confetti-sway { 0% { transform: translateX(0px); } 50% { transform: translateX(100px); } 100% { transform: translateX(0px); } } .confetti { position: fixed; z-index: 9999; pointer-events: none; width: 10px; height: 10px; }
+    </style>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Arrows Popup -->
+    <div class="arrows-popup">
+        <div class="popup-title">Enter secret code</div>
+        <div class="arrows-container">
+            <div class="arrow arrow-up"><i class="fas fa-chevron-up"></i></div>
+            <div class="arrow arrow-left"><i class="fas fa-chevron-left"></i></div>
+            <div class="center-dot"></div>
+            <div class="arrow arrow-right"><i class="fas fa-chevron-right"></i></div>
+            <div class="arrow arrow-down"><i class="fas fa-chevron-down"></i></div>
+        </div>
+    </div>
+
+    <!-- Navigation Toggle -->
+    <div class="nav-toggle">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <ul class="nav-links">
+            <li class="question-mark-icon">
+                <div class="question-mark">?</div>
+            </li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#education">Formation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Nelson Bidault-Ferre</h1>
+        <h2>Développeur Web en devenir</h2>
+        <p>Étudiant en BTS SIO passionné par le développement et la création</p>
+    </header>
+
+    <!-- Profile Container -->
+    <div class="profile-container">
+        <!-- About Section -->
+        <section class="section" id="about">
+            <h2>À propos de moi</h2>
+            <p>Actuellement en deuxième année de BTS Services Informatiques aux Organisations, je suis passionné par la création et la conception de projets informatiques. Mon approche créative et ma soif d'apprentissage me poussent constamment à explorer de nouveaux horizons dans le développement web et la programmation.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2>Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Langages</h3>
+                    <p>C++, SQL, Python, PHP, HTML/CSS, Java, C#</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Conception</h3>
+                    <p>MCD, MRD</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Sécurité</h3>
+                    <p>Cybersécurité, RGPD</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Infrastructure</h3>
+                    <p>Réseaux</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2>Projets Personnels</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Développement d'un Jeu Vidéo</h3>
+                    <p>Actuellement en développement d'un jeu vidéo personnel, combinant ma passion pour la programmation et la création.</p>
+                </div>
+            </div>
+        </br>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Développement de Jeu Vidéo</h3>
+                    <p>Actuellement en développement d'un jeu vidéo personnel, combinant ma passion pour la programmation et la création.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <h2>Formation</h2>
+            <div class="skill-card">
+                <h3>BTS SIO</h3>
+                <p>Services Informatiques aux Organisations</p>
+                <p>Formation complète incluant :</p>
+                <ul>
+                    <li>Développement d'applications</li>
+                    <li>Infrastructure réseau</li>
+                    <li>Culture économique et managériale</li>
+                    <li>Anglais professionnel</li>
+                    <li>Mathématiques appliquées</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:nelson.bidaultferre@gmail.com">nelson.bidaultferre@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/nelson-bidault-ferre-524061297/" target="_blank">linkedin.com/in/nelson-bidault-ferre</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>06 72 37 49 23</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Dock-Nel?tab=repositories" target="_blank">github.com/Dock-Nel</a>
+                </div>
+                <div class="contact-item">
+                    <i class="far fa-smile"></i>
+                    <a href="javascript:void(0)" id="secret-code-hint" style="display: flex; align-items: center; gap: 8px;">
+                        Click here
+                        <span style="color:#ff0000; display:none">↑</span>
+                        <span style="color:#ff0000; display:none">↑</span>
+                        <span style="color:#00ff00; display:none">↓</span>
+                        <span style="color:#00ff00; display:none">↓</span>
+                        <span style="color:#0000ff; display:none">←</span>
+                        <span style="color:#ffff00; display:none">→</span>
+                        <span style="color:#0000ff; display:none">←</span>
+                        <span style="color:#ffff00; display:none">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() { AOS.init({ duration: 800, offset: 100, once: true }); const sections = document.querySelectorAll('.section'); const skillCards = document.querySelectorAll('.skill-card'); const projectCards = document.querySelectorAll('.project-card'); const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.animationDelay = '0.2s'; entry.target.style.animationPlayState = 'running'; } }); }, { threshold: 0.1 }); sections.forEach((section, index) => { section.style.animationDelay = `${index * 0.2}s`; section.style.animationPlayState = 'paused'; observer.observe(section); }); skillCards.forEach((card, index) => { card.style.animationDelay = `${index * 0.1 + 0.5}s`; card.style.animationPlayState = 'paused'; observer.observe(card); }); projectCards.forEach((card, index) => { card.style.animationDelay = `${index * 0.2 + 0.3}s`; card.style.animationPlayState = 'paused'; observer.observe(card); }); const navToggle = document.querySelector('.nav-toggle'); const navigation = document.querySelector('.navigation'); navToggle.addEventListener('click', () => { navigation.classList.toggle('active'); navToggle.classList.toggle('active'); document.querySelectorAll('.nav-links a').forEach((link, index) => { link.style.animation = `navItemFade 0.3s ease forwards ${index / 7 + 0.3}s`; }); }); document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navigation.classList.remove('active'); }); }); let lastScroll = 0; window.addEventListener('scroll', () => { const currentScroll = window.pageYOffset; if (currentScroll > lastScroll) { navigation.classList.remove('active'); } lastScroll = currentScroll; }); document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { const headerOffset = 100; const elementPosition = target.getBoundingClientRect().top; const offsetPosition = elementPosition + window.pageYOffset - headerOffset; window.scrollTo({ top: offsetPosition, behavior: 'smooth' }); } }); }); function updateNavToggleState() { const toggle = document.querySelector('.nav-toggle'); const header = document.querySelector('.header'); const toggleRect = toggle.getBoundingClientRect(); const headerRect = header.getBoundingClientRect(); if (headerRect.top <= toggleRect.bottom && headerRect.bottom >= toggleRect.top) { toggle.classList.add('over-header'); } else { toggle.classList.remove('over-header'); } } window.addEventListener('scroll', updateNavToggleState); document.addEventListener('DOMContentLoaded', updateNavToggleState); const questionMark = document.querySelector('.question-mark'); const arrowsPopup = document.querySelector('.arrows-popup'); let arrowSequence = []; const correctSequence = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right']; let hasActivatedEasterEgg = false; questionMark.addEventListener('click', () => { arrowsPopup.style.display = arrowsPopup.style.display === 'none' ? 'block' : 'none'; }); document.addEventListener('click', (e) => { if (!arrowsPopup.contains(e.target) && !questionMark.contains(e.target)) { arrowsPopup.style.display = 'none'; } }); document.querySelectorAll('.arrow').forEach(arrow => { arrow.addEventListener('click', () => { arrow.style.transform = 'scale(0.9)'; setTimeout(() => { arrow.style.transform = 'scale(1)'; }, 100); const direction = arrow.className.split(' ')[1].replace('arrow-', ''); arrowSequence.push(direction); if (arrowSequence.length > 8) { arrowSequence.shift(); } if (JSON.stringify(arrowSequence) === JSON.stringify(correctSequence) && !hasActivatedEasterEgg) { activateEasterEgg(); hasActivatedEasterEgg = true; } }); }); function createConfetti() { const colors = ['#ff6b2b', '#2a1810', '#d35400', '#e8e8e8']; const shapes = ['square', 'circle']; for (let i = 0; i < 100; i++) { const confetti = document.createElement('div'); confetti.className = 'confetti'; const color = colors[Math.floor(Math.random() * colors.length)]; const shape = shapes[Math.floor(Math.random() * shapes.length)]; const left = Math.random() * 100 + 'vw'; const animationDuration = (Math.random() * 3 + 2) + 's'; const size = Math.random() * 10 + 5 + 'px'; confetti.style.cssText = ` left: ${left}; background-color: ${color}; border-radius: ${shape === 'circle' ? '50%' : '0'}; width: ${size}; height: ${size}; position: fixed; top: -20px; animation: confetti-fall ${animationDuration} linear forwards, confetti-sway ${animationDuration} ease-in-out infinite; animation-delay: ${Math.random() * 3}s; `; document.body.appendChild(confetti); setTimeout(() => { confetti.remove(); }, parseFloat(animationDuration) * 1000); } } function activateEasterEgg() { const h1 = document.querySelector('.header h1'); h1.innerHTML = 'Nelson Bidault-Ferre 😎'; document.body.style.fontFamily = "'Comic Sans MS', cursive, sans-serif"; document.documentElement.style.setProperty('--primary', '#ff4500'); document.documentElement.style.setProperty('--accent', '#ff6b2b'); document.documentElement.style.setProperty('--text', '#ffffff'); document.body.style.animation = 'rainbow-flash 1s'; document.querySelector('.arrows-popup').style.display = 'none'; createConfetti(); } const secretCodeHint = document.querySelector('#secret-code-hint'); secretCodeHint.addEventListener('click', function(e) { e.preventDefault(); const spans = this.querySelectorAll('span'); spans.forEach(span => { span.style.display = 'inline'; }); }); const secretCodeItem = document.querySelector('#secret-code-hint').parentElement.parentElement; secretCodeItem.addEventListener('click', function() { questionMark.click(); }); });
+    </script>
+</body>
+</html>
