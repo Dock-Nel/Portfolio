@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nelson Bidault - Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="NelsonBidault.css">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+    <!-- Barre de Nav -->
+    <script>
+        console.log("Window inner width: " + window.innerWidth);
+    </script>
+
+    <div class="nav-toggle">
+        <div class="navigation-class">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <ul class="nav-links">
+
+            <!-- Audio -->
+            <li class="sound-icon">
+                <div class="sound" onclick="toggleMusic()">
+                    <i class="fas fa-volume-up"
+                        style="display: flex; justify-content: center; align-items: center;"></i>
+                </div>
+            </li>
+            <audio loop id="backLofi" src="backLofi.mp3"></audio>
+            <!---------->
+
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#education">Formation</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <p class="Nelson">Nelson Bidault</p>
+        <h2><b>Développeur</b></h2>
+        <p>Étudiant au Cnam Enjmin passionné par la création</p>
+    </header>
+    <div style="text-align: center; opacity: 0; transition: opacity 2s; position: absolute; top: 44.5em; width: 100%;"
+        id="chevron">
+        <i class="fas fa-chevron-down" style="font-size: 2em; color: white;"></i>
+    </div>
+
+    <!-- Profil  -->
+    <div class="profile-container">
+        <!-- A propos de moi -->
+        <section class="section" id="about">
+            <h2>À propos de moi</h2>
+            <p>Bonjour, je suis Nelson Bidault, un développeur passionné et qui aime finaliser correctement ses projets
+                !</p>
+            <p>Vous aurez peut-être l'occasion de me rencontrer et de constater mon côté créatif et travailleur, avec
+                bien sûr ma bonne humeur. 😊</p>
+            <p>J’ai depuis mon plus jeune âge une grande passion pour le jeu vidéo, que ce soit le gameplay, graphismes
+                ou le son.</p>
+            <p>Cette passion m’a naturellement donné envie de travailler dans ce domaine, mais j’ai également un intérêt marqué
+                 pour le développement web. 🕹️</p>
+            <p>Je suis également très intéressé par les nouvelles technologies, les cultures et langues étrangères ainsi
+                que par la musique, que je consomme quotidiennement 🎶</p>
+            <p>C'est une très courte introduction de moi-même, mais je suis évidemment ouvert à tout échange. <b> Vous
+                    trouverez mes contacts en bas de mon portfolio !</b></p>
+        </section>
+
+        <!-- Compétences Section -->
+        <section class="section" id="skills">
+            <h2>Compétences techniques développées lors de mon BTS</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Langages</h3>
+                    <p>C++, SQL, Python, PHP, HTML/CSS, Javascript, Java, C#</p>
+                    <h3>Framework</h3>
+                    <p>Symfony, JQuery</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Conception</h3>
+                    <p>Je maîtrise l’architecture MVC <br \><br \> Modèle Conceptuel de Données <br \><br \>  Modèle Relationnel de Données</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Sécurité</h3>
+                    <p>Cybersécurité <br \><br \> RGPD <br \><br \> Matrice des risques</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Compétences Section Exemples -->
+        <section class="section" id="skills">
+            <h2>Voici quelques exemples de travaux produits lors de mon BTS : </h2>
+
+            <div class="example-buttons">
+                <div class="example-item">
+                    <p>Exemple de code réalisé durant mon stage en entreprise, il résume bien ce que je peux faire :</p>
+                    <a class="btn primary" href="https://gist.github.com/Dock-Nel/211e76dbdc0a795d28f5e32b96e15b9c" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span>Projet PHP — Wediv</span>
+                    </a>
+                </div>
+
+                <div class="example-item">
+                    <p>Exemple de structure de base de données réutilisée dans Wediv :</p>
+                    <a class="btn secondary" href="ImagesPNG/BaseHucth.png" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-image" aria-hidden="true"></i>
+                        <span>BDD — Hutchinson</span>
+                    </a>
+                </div>
+            </div>
+
+            <p>Fiches de procédures réalisées sur diverses thématiques techniques :</p>
+            <div class="proc-links" aria-label="Fiches de procédures">
+                <div class="proc-link">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <a href="PDF/Docker - Procédure.pdf" target="_blank" rel="noopener noreferrer">Docker</a>
+                    <small>PDF</small>
+                </div>
+                <div class="proc-link">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <a href="PDF/PHP de base - Procédure.pdf" target="_blank" rel="noopener noreferrer">PHP Natif</a>
+                    <small>PDF</small>
+                </div>
+                <div class="proc-link">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <a href="PDF/PHP orienté objet - Procédure.pdf" target="_blank" rel="noopener noreferrer">PHP orienté objet</a>
+                    <small>PDF</small>
+                </div>
+                <div class="proc-link">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <a href="PDF/HTML _ CSS - Procédure.pdf" target="_blank" rel="noopener noreferrer">HTML et CSS</a>
+                    <small>PDF</small>
+                </div>
+                <div class="proc-link">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <a href="PDF/Référencement Web.pdf" target="_blank" rel="noopener noreferrer">Référencement Web</a>
+                    <small>PDF</small>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <!-- Compétences Illustration -->
+        <h1 class="software-title"><u>Logiciels utilisés</u></h1>
+        <div class="SecL1">
+            <div class="sectionRoundL">
+                <div class="UnityText">Unity</div>
+                <img src="ImagesSVG/Unity.svg" alt="Unity Logo" class="Unity">
+            </div>
+        </div>
+        <div class="SecR1">
+            <div class="sectionRoundR">
+                <div class="BlenderText">Blender</div>
+                <img src="ImagesSVG/blender-svgrepo-com.svg" alt="Blender Logo" class="Blender">
+            </div>
+        </div>
+        <div class="SecL2">
+            <div class="sectionRoundL">
+                <div class="GodotText">Godot</div>
+                <img src="ImagesSVG/Godot_icon.svg" alt="Godot Logo" class="Unity">
+            </div>
+        </div>
+        <div class="SecR2">
+            <div class="sectionRoundR">
+                <div class="GithubText">Github</div>
+                <img src="ImagesSVG/github-color-svgrepo-com.svg" alt="Github Logo" class="Blender">
+            </div>
+        </div>
+
+
+        <!-- Projets Section -->
+        <section class="section" id="projects">
+            <h2>Projets Personnels</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Unity Learn</h3>
+                    <p>J'ai réalisé un projet solo sur Unity dans le cadre d’un parcours Unity Learn.
+                        Ce projet m’a permis de me familiariser progressivement avec le moteur et de gagner en aisance avec ses différents outils.</p>
+                    <p>Au fil du développement, j’ai exploré plusieurs domaines essentiels, notamment le sound design, l’éclairage,
+                         les shaders ainsi que la mise en place de comportements IA. Cette expérience m’a donné une vision plus complète du pipeline de création 
+                         et m’a aidé à renforcer mes compétences techniques.</p>
+                    <p>Ce projet a été pour moi une étape importante, me permettant d’expérimenter librement,
+                         de comprendre en profondeur le fonctionnement du moteur et de prendre confiance dans mes capacités à mener un jeu de A à Z.</p>
+                    <p>Vous pouvez essayer le jeu "Tanks!", juste ici sur
+                        itch.io ! : <a href="https://dock-nel.itch.io/tanks" target="_blank"
+                            style="color: rgb(75, 249, 130);">Tanks! ⚔️</a></p></p>
+                    <div class="project-images">
+                        <img src="ImagesPNG/LogoTanks.png" alt="Logo de Tanks" class="project-img">
+                        <img src="ImagesPNG/TankScreen.png" alt="Tanks screenshot" class="project-img">
+                    </div>
+                    </div>
+                </div>
+                </br></br>
+                <div class="project-card">
+                    <h3>Quick Scope</h3>
+                    <p>J’ai participé au développement de <strong>QuickScope</strong>, un jeu réalisé en 2 jours et demi dans le cadre d’une Game Jam.
+                         Nous étions une équipe composée d’un sound designer, d’un graphiste et de trois programmeurs. Le thème de la jam,
+                          “It always ends like this”, nous a inspiré un sujet méta : celui des projets de Game Jam qui ne sont jamais vraiment terminés 
+                          à cause de l’<em>overscope</em> — le fait de viser trop grand pour le temps imparti.</p>
+                    <p>Le jeu se déroule sur un vieux système d’exploitation fictif, dans lequel le joueur doit compléter trois mini-jeux 
+                        (programmation, sound design et graphisme) avant la fin d’un compte à rebours, à l’image de la pression réelle d’une Game Jam. 
+                        Je me suis principalement occupé du mini-jeu dédié au sound design, une application inspirée des anciens logiciels de 
+                        création musicale. Le but était de faire glisser différentes notes pour reproduire un court morceau donné en exemple.</p>
+                    <p>Bien que le projet n’ait pas pu être entièrement terminé dans les délais, nous avons obtenu une version solide et largement avancée.
+                         Cette expérience a été l’occasion de collaborer efficacement en équipe et d’explorer une approche humoristique et réflexive du développement en Game Jam.</p>
+                    <p>Voici quelques images du projet, il faut essayer d'imaginer le mini jeu du son avec la possibilitée de mettre les blocs sur la grille de lecture (puis faire l'extrait réalisé!) 😊 :</p>
+                    <div class="project-images">
+                         <video controls class="project-img"><source src="VideoMP4/VideoQuickScopeGame.mp4" type="video/webm" /></video>
+                        <video controls class="project-img"><source src="VideoMP4/VideoQuickScope.mp4" type="video/webm" /></video>
+                    </div>
+                </div>
+                </br></br>
+                <div class="project-card">
+                    <h3>Participations à des game Jams</h3>
+                    <p>J'ai eu l'opportunité de participer à ma première Game Jam, la "Global Game Jam Toulouse" de 2025
+                        (du 24/01 au 26/01).</p>
+                    <p>Cette expérience m'a permis de collaborer avec une équipe de cinq personnes dans un délai très
+                        court. J'ai découvert de nouveaux outils et méthodes de travail grâce aux membres plus
+                        expérimentés qui ont partagé leurs connaissances.</p>
+                    <p>Notre équipe était composée de quatre développeurs, dont deux en études dans le domaine, et une
+                        graphiste. J'ai principalement travaillé sur la gestion des ennemis et de leurs comportements,
+                        tout en contribuant à d'autres petites tâches.</p>
+                    <p>Voici quelques images de notre jeu final, nommé "Blown Away", que vous pouvez essayer sur ce lien
+                        itch.io : <a href="https://dock-nel.itch.io/blownaway" target="_blank"
+                            style="color: lightblue;">Blown Away 🫧</a></p>
+                    <div class="project-images">
+                        <img src="ImagesPNG/LogoBA.png" alt="Global Game Jam" class="project-img">
+                        <img src="ImagesPNG/BlownAway.png" alt="Blown Away - Image non chargée" class="project-img">
+                    </div>
+                </div>
+                </br></br>
+                <div class="project-card">
+                    <h3>Développement sur Godot</h3>
+                    <p>Après m'être beaucoup informé sur le sujet, je me suis davantage familiarisé avec l'interface de
+                        Godot et son langage GDScript.</p>
+                    <p>J'ai suivi de nombreux tutoriels sur son utilisation, et réalisé de petits projets.</p>
+                    <p>Vous pouvez retrouver par exemple un projet de test, lui aussi encore en développement :</p>
+                    <div class="project-images">
+                        <img src="ImagesPNG/KnightEditor.png" alt="Knight Game in Godot" class="project-img">
+                        <img src="ImagesPNG/KnightPlay.png" alt="Knight Game preview" class="project-img">
+                    </div>
+                </div>
+                </br></br>
+                <div class="project-card">
+                    <h3>Développement de Daidalos</h3>
+                    <p>Actuellement en développement d'un jeu vidéo en duo, encore en développement. </p>
+                    <p> Destiné à être un jeu 3D fait à l'aide de Unity et des modèles sur Blender, celui-ci prend place
+                        dans un labyrinthe où plusieurs pièges devront être résolus à l'aide de matériel trouvés à la
+                        surface, sur une île déserte.</p>
+                    <p>Le projet étant assez conséquent, aucune date de fin de développement n'est définie.</p>
+                    
+                    <!-- Carrousel d'images -->
+                    <div class="carousel-container">
+                        <div class="carousel">
+                            <img src="ImagesPNG/Arbre.png" alt="Arbre" class="carousel-img active">
+                            <img src="ImagesPNG/ascenseur.png" alt="Ascenseur" class="carousel-img">
+                            <img src="ImagesPNG/heal.png" alt="Heal" class="carousel-img">
+                            <img src="ImagesPNG/lanterne.png" alt="Lanterne" class="carousel-img">
+                            <img src="ImagesPNG/lianne.png" alt="Lianne" class="carousel-img">
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+                        <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="currentSlide(0)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecoles Section -->
+        <section class="section" id="education">
+            <h2>Formation</h2>
+            <div class="skill-card">
+                <h3>Cnam-Enjmin</h3>
+                <p>École nationale du jeu et des médias interactifs numériques</p>
+                <p>Licence incluant :</p>
+                <ul>
+                    <li>Développement en C#</li>
+                    <li>Utilisation de différents moteurs : Unity, Godot, Unreal Engine</li>
+                    <li>Apprentissage de l'algorithmique</li>
+                    <li>Réflexion sur le game design et le level design</li>
+                    <li>Introduction au sound design</li>
+                </ul>
+            </div>
+            </br></br>
+            <div class="skill-card">
+                <h3>BTS SIO</h3>
+                <p>Services Informatiques aux Organisations</p>
+                <p>Formation complète incluant :</p>
+                <ul>
+                    <li>Développement d'applications</li>
+                    <li>Infrastructure réseau</li>
+                    <li>Culture économique et managériale</li>
+                    <li>Anglais professionnel</li>
+                    <li>Mathématiques appliquées</li>
+                </ul>
+            </div>
+            </br></br>
+            <div class="skill-card">
+                <h3>Baccalauréat Général</h3>
+                <p>Spécialités :</p>
+                <ul>
+                    <li>Histoire-géographie, géopolitique et sciences politiques (HGGSP)</li>
+                    <li>Langues, Littératures et Cultures Étrangères (LLCE Anglais)</li>
+                    <li>Mathématiques complémentaires</li>
+                </ul>
+            </div>
+
+            </br></br>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <div class="button" data-tooltip="Taille: 128ko">
+                    <div class="button-wrapper">
+                        <div class="text">Mon CV</div>
+                        <a href="PDF/Nelson Bidault--Ferre.pdf" download>
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em"
+                                    height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                    </path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:nelson.bidaultferre@gmail.com">nelson.bidaultferre@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/nelson-bidault-ferre-524061297/"
+                    target="_blank">linkedin.com/in/nelson-bidault-ferre</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/Dock-Nel" target="_blank">github.com/Dock-Nel</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>06 72 37 49 23</span>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <div style="text-align: center;">
+        <p>Developed by Bidault Nelson</p>
+    </div>
+
+    <img class="PipeR" src="ImagesPNG/TunnelR.png" alt="Tunnel"
+        style="transform: rotate(90deg); width: 5%; z-index: 2; position: relative;">
+    <img class="Shroom" src="ImagesPNG/shroom.png" alt="shroom" style="width: 3.3%; z-index: 1; position: relative;">
+    <img class="PipeL" src="ImagesPNG/TunnelL.png" alt="Tunnel"
+        style="transform: rotate(270deg); width: 5%;  z-index: 2; position: absolute; right: 0;">
+    </div>
+</body>
+
+</html>
+<!-- ------------------------ ANIMATION GSAP --------------------------- -->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+
+<script src="https://unpkg.com/split-type"></script>
+
+
+<script>
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.registerPlugin(TextPlugin)
+
+    const Chevron = document.querySelector("#chevron");
+    const SecR1 = document.querySelector(".SecR1");
+    const SecL1 = document.querySelector(".SecL1");
+    const SecR2 = document.querySelector(".SecR2");
+    const SecL2 = document.querySelector(".SecL2");
+    const PipeR = document.querySelector(".PipeR");
+    const PipeL = document.querySelector(".PipeL");
+    const Shroom = document.querySelector(".Shroom");
+    const Nelson = new SplitType('.Nelson');
+
+    gsap.to(Chevron, {
+        y: 15,
+        duration: 0.5,
+        yoyo: true,
+        repeat: -1,
+        ease: "power1.inOut",
+    })
+
+    gsap.to('.Shroom', {
+        xPercent: 3000,
+        duration: 7,
+        repeat: -1,
+        ease: "linear",
+        loop: true,
+    })
+
+    gsap.to('.Shroom', {
+        y: -15,
+        x: -50,
+    })
+
+    // GSAP NOM :
+
+    gsap.to('.char', {
+        y: 0,
+        stagger: 0.05,
+        delay: 0.2,
+        duration: .1,
+    })
+
+    // GSAP LOGO :
+
+    gsap.to(SecR1, {
+        x: 1000
+    })
+
+    gsap.to(SecR2, {
+        x: 1000
+    })
+
+    gsap.to(SecL1, {
+        x: -1000
+    })
+
+    gsap.to(SecL2, {
+        x: -1000
+    })
+
+    // GSAP Animations - Grands écrans
+    if (window.innerWidth > 1540) {
+        gsap.to(SecL1, {
+            xPercent: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: SecL1,
+                toggleActions: "play reverse none none",
+                start: "top 60%",
+                end: "bottom 40%",
+                // markers: true,
+                scrub: 1,
+            }
+        });
+
+        gsap.to(SecL2, {
+            xPercent: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: SecL2,
+                toggleActions: "play reverse none none",
+                start: "top 60%",
+                end: "bottom 40%",
+                // markers: true,
+                scrub: 1,
+            }
+        });
+
+        gsap.to(SecR1, {
+            xPercent: -50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: SecR1,
+                toggleActions: "play reverse none none",
+                start: "top 60%",
+                end: "bottom 40%",
+                scrub: 1,
+            }
+        });
+
+        gsap.to(SecR2, {
+            xPercent: -50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: SecR2,
+                toggleActions: "play reverse none none",
+                start: "top 60%",
+                end: "bottom 40%",
+                scrub: 1,
+            }
+        });
+    } else if (window.innerWidth > 768) {
+        // GSAP Animations - Tablettes / Laptops
+        gsap.to(SecL1, {
+            xPercent: 65,
+            duration: 1,
+            scrollTrigger: {
+                trigger: SecL1,
+                toggleActions: "play reverse none none",
+                start: "top 90%",
+                end: "bottom 60%",
+                // markers: true,
+                scrub: 1,
+            }
+        });
+
+        gsap.to(SecL2, {
+            xPercent: 65,
+            duration: 1,
+            scrollTrigger: {
+                trigger: SecL2,
+                toggleActions: "play reverse none none",
+                start: "top 90%",
+                end: "bottom 60%",
+                // markers: true,
+                scrub: 1,
+            }
+        });
+
+        gsap.to(SecR1, {
+            xPercent: -65,
+            duration: 1,
+            scrollTrigger: {
+                trigger: SecR1,
+                toggleActions: "play reverse none none",
+                start: "top 90%",
+                end: "bottom 60%",
+                scrub: 1,
+            }
+        });
+
+        gsap.to(SecR2, {
+            xPercent: -65,
+            duration: 1,
+            scrollTrigger: {
+                trigger: SecR2,
+                toggleActions: "play reverse none none",
+                start: "top 90%",
+                end: "bottom 60%",
+                scrub: 1,
+            }
+        });
+    } else {
+        // GSAP Animations - Mobile
+        // Moins de gros mouvements
+        gsap.fromTo(SecL1,
+            { x: -50, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: SecL1,
+                    start: "top 85%",
+                    end: "bottom 70%",
+                    scrub: 1
+                }
+            }
+        );
+
+        gsap.fromTo(SecR1,
+            { x: 50, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: SecR1,
+                    start: "top 85%",
+                    end: "bottom 70%",
+                    scrub: 1
+                }
+            }
+        );
+
+        gsap.fromTo(SecL2,
+            { x: -50, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: SecL2,
+                    start: "top 85%",
+                    end: "bottom 70%",
+                    scrub: 1
+                }
+            }
+        );
+
+        gsap.fromTo(SecR2,
+            { x: 50, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: SecR2,
+                    start: "top 85%",
+                    end: "bottom 70%",
+                    scrub: 1
+                }
+            }
+        );
+    }
+
+
+</script>
+
+<!-- ------------------------ SCRIPT JS --------------------------- -->
+
+<script>
+    let currentSlideIndex = 0;
+
+    function changeSlide(n) {
+        showSlide(currentSlideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlide(currentSlideIndex = n);
+    }
+
+    function showSlide(n) {
+        const slides = document.querySelectorAll('.carousel-img');
+        const dots = document.querySelectorAll('.dot');
+        
+        if (n >= slides.length) {
+            currentSlideIndex = 0;
+        }
+        if (n < 0) {
+            currentSlideIndex = slides.length - 1;
+        }
+        
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[currentSlideIndex].classList.add('active');
+        dots[currentSlideIndex].classList.add('active');
+    }
+
+    setTimeout(() => {
+        document.getElementById('chevron').style.opacity = 1;
+    }, 2000);
+
+    function toggleMusic() {
+        const audio = document.getElementById('backLofi');
+        const soundIcon = document.querySelector('.sound i');
+        if (audio.paused) {
+            audio.play();
+            soundIcon.classList.add('playing');
+        } else {
+            audio.pause();
+            soundIcon.classList.remove('playing');
+        }
+        gsap.fromTo(soundIcon, { scale: 1 }, { scale: 1.2, duration: 0.2, yoyo: true, repeat: 1 });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+
+
+        const sections = document.querySelectorAll('.section');
+        const skillCards = document.querySelectorAll('.skill-card');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        sections.forEach((section, index) => {
+            section.style.animationDelay = `${index * 0.2}s`;
+            section.style.animationPlayState = 'paused';
+            observer.observe(section);
+        });
+
+        skillCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1 + 0.5}s`;
+            card.style.animationPlayState = 'paused';
+            observer.observe(card);
+        });
+
+        projectCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2 + 0.3}s`;
+            card.style.animationPlayState = 'paused';
+            observer.observe(card);
+        });
+
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const navigation = document.querySelector('.navigation');
+
+
+        navToggle.addEventListener('click', () => {
+            navigation.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+
+        function updateNavToggleState() {
+            const toggle = document.querySelector('.nav-toggle');
+            const header = document.querySelector('.header');
+            const toggleRect = toggle.getBoundingClientRect();
+            const headerRect = header.getBoundingClientRect();
+
+            if (headerRect.top <= toggleRect.bottom && headerRect.bottom >= toggleRect.top) {
+                toggle.classList.add('over-header');
+            } else {
+                toggle.classList.remove('over-header');
+            }
+        }
+
+        window.addEventListener('scroll', updateNavToggleState);
+        updateNavToggleState();
+
+    });
+
+</script>
